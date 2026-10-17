@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\User\Downloads\clona-tela-atualizado\app"
+    name=":app"
+    type="APP"
+    maven="TH Testes:app:unspecified"
+    agpVersion="9.3.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\User\AppData\Local\Android\Sdk\platforms\android-37.0\android.jar;C:\Users\User\AppData\Local\Android\Sdk\build-tools\36.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="21"
+    compileTarget="android-37.0"
+    highlightGradualR8Api="false">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>
