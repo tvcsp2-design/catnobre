@@ -2,7 +2,7 @@ name: Build Gato Nobre APK
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "principal" ]
   workflow_dispatch:
 
 jobs:
@@ -18,17 +18,14 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
-    # Se estiver tudo numa subpasta, substitua NOME_DA_PASTA pelo nome real
     - name: Grant execute permission for gradlew
-      working-directory: ./NOME_DA_PASTA
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      working-directory: ./NOME_DA_PASTA
       run: ./gradlew assembleDebug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: GatoNobre-Debug-APK
-        path: "**/build/outputs/apk/debug/*.apk"
+        path: app/build/outputs/apk/debug/*.apk
